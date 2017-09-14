@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardinal - Pay</title>
+    <meta name="viewport" content="initial-scale=1">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+
+</head>
+<body>
+    <style>
+        .demo-container {
+            width: 100%;
+            max-width: 350px;
+            margin: 50px auto;
+        }
+
+        form {
+            margin: 30px;
+        }
+        input {
+            width: 200px;
+            margin: 10px auto;
+            display: block;
+        }
+
+    </style>
+    <div class="demo-container">
+        <div class="card-wrapper"></div>
+
+        <div class="form-container active">
+            <form action="">
+                <input placeholder="Card number" type="tel" name="number">
+                <input placeholder="Full name" type="text" name="name">
+                <input placeholder="MM/YY" type="tel" name="expiry">
+                <input placeholder="CVC" type="number" name="cvc">
+            </form>
+        </div>
+    </div>
+
+    <!--4716108999716531 - Visa 5281037048916168 - MC 342498818630298 - Amex-->
+
+    <script src="lib/cards/card.js"></script>
+    <script>
+        new Card({
+            form: document.querySelector('form'),
+            placeholders: {
+                number: '5281 0370 4891 6168',
+                name: 'Full Name',
+                expiry: '12/19',
+                cvc: '123'
+            },
+            container: '.card-wrapper'
+        });
+    </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>window.jQuery || document.write('<script src="lib/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="lib/assets/js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="lib/cards/card.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="lib/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
