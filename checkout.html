@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="lib/assets/brand/bootstrap-social.png">
+
+    <title>CARDINAL</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/checkout.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#"><i class="fa fa-check-square-o"></i> CARDINAL Pay</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <!--<div class="card" style="margin-top: 20px;">
+                <div class="card-header">
+                    <h5>Payment Details</h5>
+                </div>
+                <div class="card-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="cardNumber">
+                                CARD NUMBER</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                       required autofocus />
+                                <span class="input-group-addon"><span class="fa fa-lock"></span></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8 col-md-8">
+                                <label for="expiryMonth">
+                                    EXPIRY DATE
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="expiryMonth" placeholder="MM" required />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="expiryYear" placeholder="YY" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-md-4">
+                                <div class="form-group">
+                                    <label for="cvCode">
+                                        CV CODE</label>
+                                    <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" />
+                                        Remember my Card
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="checkbox pull-right">
+                                    <label>
+                                        <input type="checkbox" />
+                                        Create Standing Instruction
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-success btn-lg btn-block" role="button"><i class="fa fa-lock"></i>&nbsp;Pay</a>
+                    </form>
+                </div>
+            </div>-->
+
+            <div id="form-container" style="text-transform: uppercase;">
+
+                <div id="card-front">
+                    <div id="shadow"></div>
+                    <div id="image-container">
+                        <span id="amount">paying: <strong>$200</strong></span>
+                        <span id="card-image"></span>
+                    </div>
+                    <!--- end card image container --->
+
+                    <label for="card-number">
+                        Card Number
+                    </label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9101 1112" length="16">
+                    <div id="cardholder-container">
+                        <label for="card-holder">Card Holder
+                        </label>
+                        <input type="text" id="card-holder" placeholder="e.g. John Doe"/>
+                    </div>
+                    <!--- end card holder container --->
+                    <div id="exp-container">
+                        <label>
+                            Expiration
+                        </label>
+                        <input id="card-month" type="text" placeholder="MM" length="2">
+                        <input id="card-year" type="text" placeholder="YY" length="2">
+                    </div>
+                    <div id="cvc-container">
+                        <label for="card-cvc"> CVC/CVV</label>
+                        <input id="card-cvc" placeholder="XXX-X" type="text" min-length="3" max-length="4">
+                        <p>Last 3 or 4 digits</p>
+                    </div>
+                    <!--- end CVC container --->
+                    <!--- end exp container --->
+                </div>
+                <!--- end card front --->
+                <div id="card-back">
+                    <div id="card-stripe">
+                    </div>
+
+                </div>
+                <!--- end card back --->
+                <input type="text" id="card-token"/>
+                <button class="btn-success" type="button" id="card-btn"><i class="fa fa-lock"></i>&nbsp;Pay</button>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            <div class="card" style="margin-top: 120px;">
+                <div class="card">
+                    <h4 class="card-header"><img src="img/nyseg.jpg" style="height: 50px;width: 50px;">&nbsp;New York State Electric &amp; Gas</h4>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6"><h6 class="pull-left">Bill No: <small>78129</small></h6></div>
+                            <div class="col-sm-6"><h6 class="pull-right">Bill Date: <small>Sep 15, 2017</small></h6></div>
+                        </div>
+                        <br>
+                        <address class="card-text">
+                            <strong>Ms. Barbara Clay</strong><br>
+                            1355 Market St, Suite 900<br>
+                            San Francisco, CA 94103<br>
+                            <abbr title="Phone">Ph:</abbr> (123) 456-7890
+                        </address>
+                        <br>
+                        <div class="card-text">
+                            <address class="card-text">
+                                Charges: $180<br>
+                                Tax: $20<br>
+                                <strong>Total: </strong> $200
+                            </address>
+                        </div>
+                        <br>
+                        <p class="card-text">This is the receipt for a payment of <b>$200.00 (USD)</b> for your works.</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Bill was presented 2 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>window.jQuery || document.write('<script src="lib/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="lib/assets/js/vendor/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="lib/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
