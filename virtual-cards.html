@@ -46,10 +46,10 @@
                     <a class="nav-link" href="index.html">Overview</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="payments.html">Payments</a>
+                    <a class="nav-link" href="payments.html">Marcus Billers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="virtual-cards.html">Virtual Card <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="virtual-cards.html">Marcus Pay <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
 
@@ -65,18 +65,22 @@
 
         <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
             <div class="row">
-                <div class="col-sm-9">
+                <div class="col-sm-8">
                     <div class="jumbotron" style="background: url('img/virtual-cards.jpg') no-repeat;height: 325px;width: 700px">
                         <div class="container"></div>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text">With our Virtual Prepaid, Secure your Online Payments. Pay anywhere, Risk free.</p>
+                            <h4 class="card-title">Marcus Pay</h4>
+                            <p class="card-text">Shop anywhere, Risk free with Marcus Pay. With us your online identity is safe.</p>
                             <br><br>
-                            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
-                                Show Card
+                            <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#requestVirtualCardModal">
+                                Request Marcus Pay
+                            </button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#viewVirtualCardModal">
+                                Show Marcus Pay
                             </button>
                         </div>
                     </div>
@@ -127,35 +131,125 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="viewVirtualCardModal" tabindex="-1" role="dialog" aria-labelledby="viewVirtualCardModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Virtual Card</h5>
+                <h5 class="modal-title" id="viewVirtualCardModalLabel">Marcus Secure Pay</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="credit-card credit-card--front">
-                    <div class="credit-card__number">4111 1111 1111 1111</div>
-                    <div class="credit-card__expiry-date">10/17</div>
-                    <div class="credit-card__owner">Jane Doe</div>
-                    <img src="img/visa-logo.png" class="credit-card__logo" />
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="credit-card credit-card--front">
+                            <div class="credit-card__number">4111 1111 1111 1111</div>
+                            <div class="credit-card__expiry-date">10/17</div>
+                            <div class="credit-card__owner">Jane Doe</div>
+                            <img src="img/visa-logo.png" class="credit-card__logo" />
+                        </div>
+                        <!--<div class="credit-card credit-card&#45;&#45;back">
+                            <div class="credit-card__strip"></div>
+                            <div class="credit-card__signature"></div>
+                            <div class="credit-card__ccv">303</div>
+                        </div>-->
+                    </div>
+                    <div class="col-sm-5">
+                        <table class="table">
+                            <thead class="thead-inverse">
+                            <tr>
+                                <th>Linked Card</th>
+                                <th>Network</th>
+                                <th>Ratio</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>•••• •••• 1289</td>
+                                <td><i class="fa fa-cc-mastercard text-warning fa-2x"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>•••• •••• 9165</td>
+                                <td><i class="fa fa-cc-visa text-primary fa-2x"></i></td>
+                                <td>1</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <!--<div class="credit-card credit-card&#45;&#45;back">-->
-                    <!--<div class="credit-card__strip"></div>-->
-                    <!--<div class="credit-card__signature"></div>-->
-                    <!--<div class="credit-card__ccv">303</div>-->
-                <!--</div>-->
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="cards.html" class="btn btn-success active" role="button" aria-pressed="true">Pay</a>
             </div>
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="requestVirtualCardModal" tabindex="-1" role="dialog" aria-labelledby="requestVirtualCardModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="requestVirtualCardModalLabel">Marcus Secure Pay</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="requestVirtualCardAmount">Marcus Pay Budget</label>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon"><i class="fa fa-dollar"></i></div>
+                        <input type="number" min="100" max="5000" class="form-control" id="requestVirtualCardAmount" aria-describedby="marcusBudgetHelp" placeholder="Enter budget amount" required>
+                    </div>
+                    <small id="marcusBudgetHelp" class="form-text text-muted">We'll never not deduct the amount till you shop.</small>
+                </div>
+                <table class="table">
+                    <thead class="thead-inverse">
+                    <tr>
+                        <th class="w-40">Linked Card</th>
+                        <th class="w-20">Network</th>
+                        <th class="w-20">Ratio</th>
+                        <th class="w-20"><i class="fa fa-check"></i></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>•••• •••• 1289</td>
+                        <td><i class="fa fa-cc-mastercard text-warning fa-2x"></i></td>
+                        <td>
+                            <input type="number" class="form-control" required>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <input type="checkbox">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>•••• •••• 9165</td>
+                        <td><i class="fa fa-cc-visa text-primary fa-2x"></i></td>
+                        <td>
+                            <input type="number" class="form-control" required>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <input type="checkbox">
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-lock"></i>&nbsp;Request</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
