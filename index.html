@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/chartist/chartist.min.css">
 </head>
 
 <body>
@@ -31,7 +32,7 @@
             </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search Marcus" aria-label="Search">
             <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
@@ -61,170 +62,146 @@
                 </li>
             </ul>
 
-            <ul class="nav nav-pills flex-column">
+            <!--<ul class="nav nav-pills flex-column">
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.infosys.com/newsroom/press-releases/Pages/cloud-new-online-lending-business.aspx" target="_blank">Source&nbsp;<i class="fa fa-sign-in"></i></a>
                 </li>
-            </ul>
+            </ul>-->
         </nav>
 
         <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
-            <h1>Dashboard</h1>
+
+            <h2>Marcus</h2>
+            <hr>
 
             <section class="row text-center placeholders">
                 <div class="col-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <div class="text-muted">Something else</div>
+                    <div class="ct-chart ct-golden-section" id="chart3"></div>
+                    <h5>Marcus Pay</h5>
+                    <span class="text-muted">Expenditure</span>
                 </div>
                 <div class="col-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
+                    <div class="ct-chart ct-golden-section" id="chart4"></div>
+                    <h5>Marcus Billers</h5>
+                    <span class="text-muted">Monthly Utilities</span>
                 </div>
                 <div class="col-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
+                    <div class="ct-chart ct-golden-section" id="chart1"></div>
+                    <h5>Marcus Loans</h5>
+                    <div class="text-muted">Principal Borrowed</div>
                 </div>
                 <div class="col-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
+                    <span class="text-warning" style="font-size: 95px;">689</span>
+                    <h5>Credit Score</h5>
+                    <span class="text-muted">Source: TransUnion</span>
                 </div>
             </section>
 
-            <h2>Section title</h2>
-            <div class="table-responsive">
+            <h3>Investments <small style="font-size: 16px;"><a href="investments.html" class="card-link">View Funds</a></small></h3>
+            <div class="table-responsive placeholders">
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
+                        <th>Funds</th>
+                        <th>Amount Invested</th>
+                        <th>Current Value</th>
+                        <th>Return Value</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>1,001</td>
-                        <td>Lorem</td>
-                        <td>ipsum</td>
-                        <td>dolor</td>
-                        <td>sit</td>
+                        <td><span class="mutual-fund-symbol">FCZX</span> Franklin California Ultra-Short Tax-Free Income Fund - Advisor</td>
+                        <td><p>$100<br><span class="mutual-fund-nav">@ NAV $10.01<sup>*</sup></span></p></td>
+                        <td><p>$101<br><span class="mutual-fund-nav">@ NAV $11.13</span></p></td>
+                        <td><p class="text-success">+0.04%<i class="fa fa-caret-up text-success"></i></p></td>
+                        <td><button class="btn btn-sm btn-success">Sell</button>&nbsp;<a class="btn btn-sm btn-outline-primary" href="investments.html">Buy</a></td>
                     </tr>
                     <tr>
-                        <td>1,002</td>
-                        <td>amet</td>
-                        <td>consectetur</td>
-                        <td>adipiscing</td>
-                        <td>elit</td>
+                        <td><span class="mutual-fund-symbol">FAZX</span> Franklin Alabama Tax-Free Income Fund - Advisor</td>
+                        <td><p>$500<br><span class="mutual-fund-nav">@ NAV $11.13<sup>*</sup></span></p></td>
+                        <td><p>$500<br><span class="mutual-fund-nav">@ NAV $11.13</span></p></td>
+                        <td><p class="text-danger">-0.0%<i class="fa fa-caret-down text-danger"></i></p></td>
+                        <td><button class="btn btn-sm btn-success">Sell</button>&nbsp;<a class="btn btn-sm btn-outline-primary" href="investments.html">Buy</a></td>
                     </tr>
                     <tr>
-                        <td>1,003</td>
-                        <td>Integer</td>
-                        <td>nec</td>
-                        <td>odio</td>
-                        <td>Praesent</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>libero</td>
-                        <td>Sed</td>
-                        <td>cursus</td>
-                        <td>ante</td>
-                    </tr>
-                    <tr>
-                        <td>1,004</td>
-                        <td>dapibus</td>
-                        <td>diam</td>
-                        <td>Sed</td>
-                        <td>nisi</td>
-                    </tr>
-                    <tr>
-                        <td>1,005</td>
-                        <td>Nulla</td>
-                        <td>quis</td>
-                        <td>sem</td>
-                        <td>at</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>nibh</td>
-                        <td>elementum</td>
-                        <td>imperdiet</td>
-                        <td>Duis</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>sagittis</td>
-                        <td>ipsum</td>
-                        <td>Praesent</td>
-                        <td>mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>Fusce</td>
-                        <td>nec</td>
-                        <td>tellus</td>
-                        <td>sed</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>augue</td>
-                        <td>semper</td>
-                        <td>porta</td>
-                        <td>Mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>massa</td>
-                        <td>Vestibulum</td>
-                        <td>lacinia</td>
-                        <td>arcu</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>eget</td>
-                        <td>nulla</td>
-                        <td>Class</td>
-                        <td>aptent</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>taciti</td>
-                        <td>sociosqu</td>
-                        <td>ad</td>
-                        <td>litora</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>torquent</td>
-                        <td>per</td>
-                        <td>conubia</td>
-                        <td>nostra</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>per</td>
-                        <td>inceptos</td>
-                        <td>himenaeos</td>
-                        <td>Curabitur</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>sodales</td>
-                        <td>ligula</td>
-                        <td>in</td>
-                        <td>libero</td>
+                        <td><span class="mutual-fund-symbol">FTZX</span> Franklin Biotechnology Discovery Fund - Advisor</td>
+                        <td><p>$200<br><span class="mutual-fund-nav">@ NAV $163.32<sup>*</sup></span></p></td>
+                        <td><p>$201<br><span class="mutual-fund-nav">@ NAV $163.38</span></p></td>
+                        <td><p class="text-success">+0.2%<i class="fa fa-caret-up text-success"></i></p></td>
+                        <td><button class="btn btn-sm btn-success">Sell</button>&nbsp;<a class="btn btn-sm btn-outline-primary" href="investments.html">Buy</a></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
+
+            <h3>Utility Bills & Offers</h3>
+            <hr>
+            <div class="row placeholders">
+                <div class="col-sm-4">
+                    <div class="card bg-light mb-3">
+                        <h6 class="card-header"><img src="img/billers/nyseg.jpg" style="height: 30px;width: 30px;">&nbsp;New York State Electric &amp; Gas</h6>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-5"><h6 class="pull-left">Bill No: <small>78129</small></h6></div>
+                                <div class="col-sm-7"><h6 class="pull-right">Date: <small>Sep 15, 2017</small></h6></div>
+                            </div>
+                            <address class="card-text">
+                                <strong>Ms. Barbara Clay</strong><br>
+                                1355 Market St, Suite 900
+                            </address>
+                            <a class="btn btn-block btn-success" href="checkout.html">Pay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card bg-light mb-3">
+                        <h6 class="card-header"><img src="img/billers/verizon.png" style="height: 27px;width: 100px;"></h6>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-5"><h6 class="pull-left">Bill No: <small>78129</small></h6></div>
+                                <div class="col-sm-7"><h6 class="pull-right">Date: <small>Sep 15, 2017</small></h6></div>
+                            </div>
+                            <address class="card-text">
+                                <strong>Ms. Barbara Clay</strong><br>
+                                1355 Market St, Suite 900
+                            </address>
+                            <a class="btn btn-block btn-success" href="checkout.html">Pay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img class="pull-left" src="img/network/chase.png" style="height: 20px;width: 92px;">
+                                </div>
+                                <div class="col-sm-6">
+                                    <img class="pull-right" src="img/network/mastercard.png" style="height: 25px;width: 41px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-5"><h6 class="pull-left">Type: <small>Platinum</small></h6></div>
+                                <div class="col-sm-7"><h6 class="pull-right">Valid: <small>Nov 15, 2017</small></h6></div>
+                            </div>
+                            <p class="card-text">
+                                20% Cashback when you Shop more than $1000
+                            </p>
+                            <a class="btn btn-block btn-primary" href="offers.html">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 </div>
+
+<script src="lib/chartist/chartist.min.js"></script>
+<script src="js/app/dashboard-charts.js"></script>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
